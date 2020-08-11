@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container"><br>
+        <h1 class="text-success text-center">Form validation</h1><br>
+        <div class="col-lg-8 m-auto d-block">
+            <form action="#" onsubmit="return validation()" class="bg-light">
+                
+                <div class="form-group">
+                    <label><b> First Name: </b></label>
+                    <input type="text" name="firstname" class="form-control" id="fname" autocomplete="off" placeholder="Enter Your First Name">
+                    <span id="firstname" class="text-danger font-weight-bold"> </span>
+                </div>
+                
+                <div class="form-group">
+                    <label><b> Last Name: </b></label>
+                    <input type="text" name="lastname" class="form-control" id="lname" autocomplete="off"
+                    placeholder="Enter Your Last Name">
+                    <span id="lastname" class="text-danger font-weight-bold"> </span>
+                </div>
+                
+                <div class="form-group">
+                    <label><b> Email: </b></label>
+                    <input type="text" name="Email" class="form-control" id="email" autocomplete="off"
+                    placeholder="Enter Your Email">
+                    <span id="Email" class="text-danger font-weight-bold"> </span>
+                </div>
+                
+                <div class="form-group">
+                    <label><b> Password: </b></label>
+                    <input type="text" name="Password" class="form-control" id="password" autocomplete="off"
+                    placeholder="Enter Your Password">
+                    <span id="Password" class="text-danger font-weight-bold"> </span>
+                </div>
+                
+                <div class="form-group">
+                    <label><b> Date of Birth: </b></label>
+                    <input type="text" name="Date of Birth" class="form-control" id="dob" autocomplete="off"
+                    placeholder="Enter Your Date of Birth">
+                    <span id="DOB" class="text-danger font-weight-bold"> </span>
+                </div>
+                
+                <div class="form-group">
+                    <label><b> Age: </b></label>
+                    <input type="text" name="Age" class="form-control" id="age" autocomplete="off"
+                    placeholder="Enter Your Age">
+                    <span id="Age" class="text-danger font-weight-bold"> </span>
+                </div>
+                
+                <input type="submit" value="submit" onclick="myFunction()" class="btn btn-success">
+                
+                
+                
+            </form>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <script type="text/javascript">
+        
+        function validation(){
+            var first_name = document.getElementById('fname').value;
+            var last_name = document.getElementById('lname').value;
+            var Email = document.getElementById('email').value;
+            var Password = document.getElementById('password').value;
+            var date_of_birth = document.getElementById('dob').value;
+            var Age = document.getElementById('age').value;
+            
+            
+            
+            
+            
+            if(first_name == ""){
+                document.getElementById('firstname').innerHTML="**Please Enter Your First Name";
+                return false;
+            }
+            
+            if(last_name == ""){
+                document.getElementById('lastname').innerHTML="**Please Enter Your Last Name";
+                return false;
+            }
+            
+            if(Email == ""){
+                document.getElementById('Email').innerHTML="**Please Enter Your Email";
+                return false;
+            }
+            
+            if(Password == ""){
+                document.getElementById('Password').innerHTML="**Please Enter Your Password";
+                return false;
+            }
+            
+            if(date_of_birth == ""){
+                document.getElementById('DOB').innerHTML="**Please Enter Your Date of Birth";
+                return false;
+            }
+            
+            if(Age == ""){
+                document.getElementById('Age').innerHTML="**Please Enter Your Age";
+                return false;
+            }
+        }
+        
+        function myFunction(){
+            var mywindow = window.open("new.html")
+        }
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>
